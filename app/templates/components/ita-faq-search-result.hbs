@@ -1,0 +1,27 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if question}}
+        <tr><td>Question</td><td>{{question}}</td></tr>
+      {{/if}}
+       {{#if answer}}
+        <tr><td>Answer</td><td>{{answer}}</td></tr>
+      {{/if}}
+      {{#if update_date}}
+        <tr><td>Update Date</td><td>{{update_date}}</td></tr>
+      {{/if}}
+      {{#if topic}}
+        {{search-result-row-list label="Topic" items=topic}}
+      {{/if}}
+      {{#if industry}}
+        {{search-result-row-list label="Industry" items=industry}}
+      {{/if}}
+      {{#if country}}
+        {{search-result-row-list label="Country" items=country}}
+      {{/if}}
+
+    </table>
+  {{/with}}
+{{/if}}

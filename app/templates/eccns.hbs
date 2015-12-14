@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>ECCNs</h1>
+  <p>THIS ECCN LIST IS FOR TESTING PURPOSES ONLY.</p>
+  <p>IT IS NOT UP TO DATE AND DOES NOT REPRESENT THE POSITION OF THE U.S. GOVERNMENT.</p>
+</div>
+<div class="content">
+  <form class="pure-form search" {{action "search" on="submit"}}>
+    <fieldset>
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <label>Keyword</label>
+          {{input class="pure-input-1" value=qField}}
+        </div>
+
+        <div class="pure-u-1">
+          <label>Description</label>
+          {{input class="pure-input-1" value=descriptionField}}
+        </div>
+
+        <div class="pure-u-1">
+          {{input type="submit" value="Search" class="pure-button pure-button-primary"}}
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  {{outlet}}
+</div>

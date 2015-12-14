@@ -1,0 +1,160 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+    {{#if lead_source}}
+      <tr><td>Lead Source</td><td>{{lead_source}}</td></tr>
+    {{/if}}
+
+    {{#if country}}
+      <tr><td>Country</td><td>{{country}}</td></tr>
+    {{/if}}
+
+    {{#if notice_type}}
+      <tr><td>Notice Type</td><td>{{notice_type}}</td></tr>
+    {{/if}}
+
+    {{#if publish_date}}
+      <tr><td>Publish Date</td><td>{{publish_date}}</td></tr>
+    {{/if}}
+
+    {{#if procurement_organization}}
+      <tr><td>Procurement Organization</td><td>{{procurement_organization}}</td></tr>
+    {{/if}}
+
+    {{#if procurement_office}}
+      <tr><td>Procurement Office</td><td>{{procurement_office}}</td></tr>
+    {{/if}}
+
+    {{#if procurement_organization_address}}
+      <tr><td>Procurement Organization Address</td><td>{{procurement_organization_address}}</td></tr>
+    {{/if}}
+
+    {{#if classification_code}}
+      <tr><td>Classification Code</td><td>{{classification_code}}</td></tr>
+    {{/if}}
+
+    {{#if industry}}
+      <tr><td>Industry</td><td>{{industry}}</td></tr>
+    {{/if}}
+
+    {{#if procurement_office_address}}
+      <tr><td>Procurement Office Address</td><td>{{procurement_office_address}}</td></tr>
+    {{/if}}
+
+    {{#if title}}
+      <tr><td>Title</td><td>{{title}}</td></tr>
+    {{/if}}
+
+    {{#if reference_number}}
+      <tr><td>Reference Number</td><td>{{reference_number}}</td></tr>
+    {{/if}}
+
+    {{#if project_number}}
+      <tr><td>Project Number</td><td>{{project_number}}</td></tr>
+    {{/if}}
+
+    {{#if project_size}}
+      <tr><td>Project Size</td><td>{{project_size}}</td></tr>
+    {{/if}}
+
+    {{#if contract_number}}
+      <tr><td>Contract Number</td><td>{{contract_number}}</td></tr>
+    {{/if}}
+
+    {{#if end_date}}
+      <tr><td>End Date</td><td>{{end_date}}</td></tr>
+    {{/if}}
+
+    {{#if publish_date_amended}}
+      <tr><td>Publish Date Amended</td><td>{{publish_date_amended}}</td></tr>
+    {{/if}}
+
+    {{#if contact}}
+      <tr><td>Contact</td><td>{{contact}}</td></tr>
+    {{/if}}
+
+    {{#if description}}
+      <tr><td>Description</td><td>{{description}}</td></tr>
+    {{/if}}
+
+    {{#if tags}}
+      <tr><td>Tags</td><td>{{tags}}</td></tr>
+    {{/if}}
+
+    {{#if competitive_procurement_strategy}}
+      <tr><td>Competitive Procurement Strategy</td><td>{{competitive_procurement_strategy}}</td></tr>
+    {{/if}}
+
+    {{#if non_competitive_procurement_strategy}}
+        <tr><td>Noncompetitive Procurement Strategy</td><td>{{non_competitive_procurement_strategy}}</td></tr>
+    {{/if}}
+
+    {{#if url}}
+        <tr><td>URL</td><td>{{url}}</td></tr>
+    {{/if}}
+
+    {{#if specific_location}}
+        <tr><td>Specific Location</td><td>{{specific_location}}</td></tr>
+    {{/if}}
+
+    {{#if specific_address}}
+        <tr><td>End Date</td><td>{{end_date}}</td></tr>
+    {{/if}}
+
+    {{#if funding_source}}
+        <tr><td>Funding Source</td><td>{{funding_source}}</td></tr>
+    {{/if}}
+
+    {{#if borrowing_entity}}
+        <tr><td>Borrowing Entity</td><td>{{borrowing_entity}}</td></tr>
+    {{/if}}
+
+    {{#if comments}}
+        <tr><td>Comments</td><td>{{comments}}</td></tr>
+    {{/if}}
+
+    {{#if submitting_officer}}
+        <tr><td>Submitting Officer</td><td>{{submitting_officer}}</td></tr>
+    {{/if}}
+
+    {{#if submitting_officer_contact}}
+        <tr><td>Submitting Officer Contact</td><td>{{submitting_officer_contact}}</td></tr>
+    {{/if}}
+
+    {{#if status}}
+        <tr><td>Status</td><td>{{status}}</td></tr>
+    {{/if}}
+
+    {{#if trade_agreement}}
+        <tr><td>Trade Agreement</td><td>{{trade_agreement}}</td></tr>
+    {{/if}}
+
+    {{#if bid_type}}
+        <tr><td>Bid Type</td><td>{{bid_type}}</td></tr>
+    {{/if}}
+
+    {{#if implementing_entity}}
+        <tr><td>Implementing Entity</td><td>{{implementing_entity}}</td></tr>
+    {{/if}}
+
+    {{search-result-row-list label="URLs" items=urls}}
+
+    {{#if min_contract_value}}
+        <tr><td>Min Contract Value</td><td>{{min_contract_value}}</td></tr>
+    {{/if}}
+
+    {{#if max_contract_value}}
+        <tr><td>Max Contract Value</td><td>{{max_contract_value}}</td></tr>
+    {{/if}}
+
+    {{#if source}}
+        <tr><td>Source</td><td>{{source}}</td></tr>
+    {{/if}}
+
+    {{search-result-row-list label="Categories" items=categories}}
+
+    </table>
+  {{/with}}
+{{/if}}

@@ -1,0 +1,32 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if id}}
+        <tr><td>ID</td><td>{{id}}</td></tr>
+      {{/if}}
+
+      {{#if title}}
+        <tr><td>Title</td><td>{{title}}</td></tr>
+      {{/if}}
+
+      {{#if content_html}}
+          <tr><td>Content HTML</td><td>{{content_html}}</td></tr>
+      {{/if}}
+
+      {{#if published_date}}
+          <tr><td>Published Date</td><td>{{published_date}}</td></tr>
+      {{/if}}
+
+      {{#if source}}
+          <tr><td>Source</td><td>{{source}}</td></tr>
+      {{/if}}
+
+      {{search-result-row-list label="Countries" items=country}}
+
+      {{search-result-row-list label="Topics" items=topic}}
+
+    </table>
+  {{/with}}
+{{/if}}

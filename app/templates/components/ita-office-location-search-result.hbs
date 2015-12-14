@@ -1,0 +1,37 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if state}}
+        <tr><td>State</td><td>{{state}}</td></tr>
+      {{/if}}
+      {{#if country}}
+        <tr><td>Country</td><td>{{country}}</td></tr>
+      {{/if}}
+      {{#if post}}
+          <tr><td>Post</td><td>{{post}}</td></tr>
+      {{/if}}
+      {{#if office_name}}
+          <tr><td>Office Name</td><td>{{office_name}}</td></tr>
+      {{/if}}
+      {{#if email}}
+          <tr><td>Email</td><td>{{email}}</td></tr>
+      {{/if}}
+      {{#if fax}}
+          <tr><td>Fax</td><td>{{fax}}</td></tr>
+      {{/if}}
+      {{#if mail_instructions}}
+          <tr><td>Mail Instructions</td><td>{{mail_instructions}}</td></tr>
+      {{/if}}
+      {{#if phone}}
+          <tr><td>Phone</td><td>{{phone}}</td></tr>
+      {{/if}}
+      {{#if post_type}}
+          <tr><td>Post Type</td><td>{{post_type}}</td></tr>
+      {{/if}}
+      {{search-result-row-list label="Address" items=address}}
+
+    </table>
+  {{/with}}
+{{/if}}

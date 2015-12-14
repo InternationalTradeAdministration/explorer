@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>Country Fact Sheets</h1>
+</div>
+<div class="content">
+  <form class="pure-form pure-form-stacked search" {{action "search" on="submit"}}>
+    <fieldset>
+      <label for="sources">Keyword</label>
+      {{input class="pure-input-1" value=qField}}
+
+      <div class="pure-u-11-24">
+        <label for="countries">Countries</label>
+        {{view "select2"
+          content=countryList
+          selection=countriesField
+          optionValuePath="content.value"
+          optionLabelPath="content.label"
+          id="countries"
+          class="pure-u-23-24"
+          multiple=true}}
+      </div>
+
+      {{input type="submit" value="Search" class="pure-u-1 pure-u-md-11-24 pure-button pure-button-primary"}}
+
+    </fieldset>
+  </form>
+
+  {{outlet}}
+</div>

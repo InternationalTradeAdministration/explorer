@@ -1,0 +1,42 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.company_name}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if ita_contact_email}}
+        <tr><td>ITA Contact Email</td><td>{{ita_contact_email}}</td></tr>
+      {{/if}}
+      {{#if company_name}}
+        <tr><td>Company Name</td><td>{{company_name}}</td></tr>
+      {{/if}}
+      {{#if company_phone}}
+          <tr><td>Company Phone</td><td>{{company_phone}}</td></tr>
+      {{/if}}
+      {{#if company_address}}
+          <tr><td>Company Address</td><td>{{company_address}}</td></tr>
+      {{/if}}
+      {{#if company_website}}
+          <tr><td>Company Website</td><td><a href="{{unbound company_website}}" target="_blank">{{company_website}}</a></td></tr>
+      {{/if}}
+      {{#if company_description}}
+          <tr><td>Company Description</td><td>{{company_description}}</td></tr>
+      {{/if}}
+      {{#if company_email}}
+          <tr><td>Company Email</td><td>{{company_email}}</td></tr>
+      {{/if}}
+      {{#if ita_office}}
+          <tr><td>ITA Office</td><td>{{ita_office}}</td></tr>
+      {{/if}}
+      {{#if contact_title}}
+          <tr><td>Contact Title</td><td>{{contact_title}}</td></tr>
+      {{/if}}
+      {{#if contact_name}}
+          <tr><td>Contact Name</td><td>{{contact_name}}</td></tr>
+      {{/if}}
+      {{#if category}}
+          <tr><td>Category</td><td>{{category}}</td></tr>
+      {{/if}}
+
+    </table>
+  {{/with}}
+{{/if}}

@@ -1,0 +1,32 @@
+form.search {
+    input[type=submit] {
+      margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 48em) {
+  form.search {
+    margin-top: 2rem;
+    input[type=submit] {
+      margin-top: 2rem;
+      float: right;
+    }
+    .countries {
+      padding-right: 8.33%;
+    }
+    label {
+      font-weight: 100;
+    }
+    input, .select2-container {
+      height: 36px;
+    }
+  }
+}
+
+.select2-results {
+  max-height: 350px;
+}
+
+.dropdown_filter {
+  padding: 5px;
+}

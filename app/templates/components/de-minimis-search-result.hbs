@@ -1,0 +1,44 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if country_name}}
+        <tr><td>Country Name</td><td>{{country_name}}</td></tr>
+      {{/if}}
+
+      {{#if country}}
+        <tr><td>Country</td><td>{{country}}</td></tr>
+      {{/if}}
+
+      {{#if de_minimis_value}}
+        <tr><td>De Minimis Value</td><td>{{de_minimis_value}}</td></tr>
+      {{else}}
+        {{#if de_minimis_currency}}
+          <tr><td>De Minimis Value</td><td>0</td></tr>
+        {{/if}}
+      {{/if}}
+
+      {{#if de_minimis_currency}}
+        <tr><td>De Minimis Currency</td><td>{{de_minimis_currency}}</td></tr>
+      {{/if}}
+
+      {{#if vat_amount}}
+        <tr><td>VAT Amount</td><td>{{vat_amount}}</td></tr>
+      {{else}}
+        {{#if vat_currency}}
+          <tr><td>VAT Amount</td><td>0</td></tr>
+        {{/if}}
+      {{/if}}
+
+      {{#if vat_currency}}
+        <tr><td>VAT Currency</td><td>{{vat_currency}}</td></tr>
+      {{/if}}
+
+      {{#if notes}}
+        <tr><td>Notes</td><td>{{notes}}</td></tr>
+      {{/if}}
+
+    </table>
+  {{/with}}
+{{/if}}

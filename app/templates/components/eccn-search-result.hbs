@@ -1,0 +1,44 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+    <table class="pure-table pure-table-bordered">
+
+      {{#if description}}
+        <tr><td>Description</td><td>{{description}}</td></tr>
+      {{/if}}
+
+      {{#if eccn0}}
+        <tr><td>eccn0</td><td>{{eccn0}}</td></tr>
+      {{/if}}
+
+      {{#if eccn1}}
+        <tr><td>eccn1</td><td>{{eccn1}}</td></tr>
+      {{/if}}
+
+      {{#if eccn2}}
+        <tr><td>eccn2</td><td>{{eccn2}}</td></tr>
+      {{/if}}
+
+      {{#if eccn3}}
+        <tr><td>eccn3</td><td>{{eccn3}}</td></tr>
+      {{/if}}
+
+      {{#if eccn4}}
+        <tr><td>eccn4</td><td>{{eccn4}}</td></tr>
+      {{/if}}
+
+      {{#if url0}}
+        <tr><td>url0</td><td><a href="{{unbound url0}}" target="_blank">{{url0}}</a></td></tr>
+      {{/if}}
+
+      {{#if url1}}
+        <tr><td>url1</td><td><a href="{{unbound url1}}" target="_blank">{{url1}}</a></td></tr>
+      {{/if}}
+
+      {{#if url2}}
+        <tr><td>url2</td><td><a href="{{unbound url2}}" target="_blank">{{url2}}</a></td></tr>
+      {{/if}}
+
+    </table>
+  {{/with}}
+{{/if}}

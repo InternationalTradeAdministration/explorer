@@ -1,0 +1,22 @@
+<p>
+{{total-results total=total}}
+{{#if searchPerformedAt}}
+    {{search-performed-at date=searchPerformedAt}}
+{{/if}}
+</p>
+
+<div id="search-results">
+  {{#each document in content}}
+    {{de-minimis-search-result document=document}}
+  {{/each}}
+</div>
+
+<div class="pages">
+  {{#each page in pagesInfo}}
+    {{#if page.isCurrent}}
+      <button class="pure-button button-small pure-button-disabled">{{page.text}}</button>
+    {{else}}
+      <button class="pure-button button-small" {{action "search" page.page}}>{{page.text}}</button>
+    {{/if}}
+  {{/each}}
+</div>

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{unbound developerportalUrl}}"><img src="assets/trade_developer.png" alt="logo"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="box-menu"><a href="{{unbound developerportalUrl}}/guidance.html">Guidance</a></li>
+        <li id="box-menu"><a href="{{unbound developerportalUrl}}/contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a role="button" id="box-menu" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><img src="assets/grid-icon.png" alt="logo"></a>
+          <ul class="dropdown-menu" role="menu">
+            <h3 id="additional-resources">Additional Resources</h3>
+            <li><a href="{{unbound developerportalUrl}}/app-gallery.html">App Gallery</a></li>
+            <li><a href="{{unbound developerportalUrl}}/api-list.html">List of all APIs</a></li>
+            <li><a href="{{unbound developerportalUrl}}/search-widgets.html">Search Widgets</a></li>
+            <li><a href="{{unbound developerportalUrl}}/api-faqs.html">API FAQs</a></li>
+            <li><a href="{{unbound developerportalUrl}}/change-log.html">Change Log</a></li>
+            <li><a href="{{unbound developerportalUrl}}/trade-agency-apis.html">APIs from Trade Agencies</a></li>
+            <li><a href="{{unbound developerportalUrl}}/tos.html">Terms of Service</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="imageBox">
+            <div class="imageinn">
+              <div class="item">
+                <img src="assets/github-blue.png" alt="github-light">
+              </div>
+            </div>
+            <div class="hoverImg">
+              <div class="item">
+                <a href="https://github.com/InternationalTradeAdministration/developerportal"><img src="assets/github-dark.png" alt="github-grey"></a>
+                <span class="caption">ITA on Github</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <header id="mob" class="navbar-toggle collapsed" aria-expanded="false">
+          <h3>API Key</h3>
+          <p class="view"><a href="{{unbound webservices_baseurl_users_signup}}">Get an API Key</a></p>
+          <p class="view"><a href="{{unbound webservices_baseurl}}">Manage Your API Key</a></p>
+          <h3>Top APIs</h3>
+          {{#each item in topApisNavItems}}
+            <p class="view"><a href="{{unbound developerportalUrl}}/{{unbound item.path}}">{{item.text}}</a></p>
+          {{/each}}
+           <h3>API Resources</h3>
+          {{#each item in apiResourcesNavItems}}
+            <p class="view"><a href="{{unbound developerportalUrl}}/{{unbound item.path}}">{{item.text}}</a></p>
+          {{/each}}
+          <h3>Additional Resources</h3>
+          {{#each item in additionalResourcesNavItems}}
+            <p class="view"><a href="{{unbound developerportalUrl}}/{{unbound item.path}}">{{item.text}}</a></p>
+          {{/each}}
+          <p class="view"><a href="https://github.com/InternationalTradeAdministration/developerportal">ITA on Github</a></p>
+        </header>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

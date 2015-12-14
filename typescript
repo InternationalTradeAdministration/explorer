@@ -1,0 +1,48 @@
+Script started on Mon Dec 14 09:56:14 2015
+]0;Jamess-MacBook-Pro:/Users/james/govwizely/Sandbox/unfoked-pre-scrub[?1034h[0;33m[32m[unfoked-pre-scrub]$[0m cd
+]0;Jamess-MacBook-Pro:/Users/james[0;33m[32m[/Users/james]$[0m scd[K[K[Kcd scri[K[K[K[Ksc[K[Kgovwizely/scripts-config/sync/
+]0;Jamess-MacBook-Pro:/Users/james/govwizely/scripts-config/sync[0;33m[32m[sync]$[0m cat sync_explorer.sh 
+#!/bin/bash
+
+# This script is used to sync the
+# govwizely and ita explorer 
+# github repositories
+
+git clone git@github.com:GovWizely/explorer.git new-ita-explorer
+git clone git@github.com:InternationalTradeAdministration/explorer.git old-ita-explorer
+
+cd new-ita-explorer
+rm -rf .git README.md .travis.yml
+
+cd ../old-ita-explorer
+cp -Rp .git README.md .travis.yml ../new-ita-explorer
+cp -p config/environment.js ../new-ita-explorer/config/
+
+cd ../new-ita-explorer
+git config user.name "ITA Data Services"
+git config user.email "DataServices@trade.gov"
+git add -A
+git commit -m "Update"
+]0;Jamess-MacBook-Pro:/Users/james/govwizely/scripts-config/sync[0;33m[32m[sync]$[0m cat sync_explorer.sh [C[C[C[C[C[C[C[C[K[H[2J[0;33m[32m[sync]$[0m cat sync_explorer.sh 
+#!/bin/bash
+
+# This script is used to sync the
+# govwizely and ita explorer 
+# github repositories
+
+git clone git@github.com:GovWizely/explorer.git new-ita-explorer
+git clone git@github.com:InternationalTradeAdministration/explorer.git old-ita-explorer
+
+cd new-ita-explorer
+rm -rf .git README.md .travis.yml
+
+cd ../old-ita-explorer
+cp -Rp .git README.md .travis.yml ../new-ita-explorer
+cp -p config/environment.js ../new-ita-explorer/config/
+
+cd ../new-ita-explorer
+git config user.name "ITA Data Services"
+git config user.email "DataServices@trade.gov"
+git add -A
+git commit -m "Update"
+]0;Jamess-MacBook-Pro:/Users/james/govwizely/scripts-config/sync[0;33m[32m[sync]$[0m 

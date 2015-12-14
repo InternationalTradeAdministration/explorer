@@ -1,0 +1,40 @@
+<h3><a href="#" {{action "toggleBody"}}>{{document.searchResultHeader}}</a></h3>
+{{#if expanded}}
+  {{#with document}}
+      <table class="pure-table pure-table-bordered">
+
+        {{#if source_id}}
+            <tr><td>Id</td><td>{{source_id}}</td></tr>
+        {{/if}}
+
+        {{#if name_english}}
+            <tr><td>Name English</td><td>{{name_english}}</td></tr>
+        {{/if}}
+
+        {{#if name_chinese}}
+            <tr><td>Name Chinese</td><td>{{name_chinese}}</td></tr>
+        {{/if}}
+
+        {{#if name_french}}
+            <tr><td>Name French</td><td>{{name_french}}</td></tr>
+        {{/if}}
+
+        {{#if name_portuguese}}
+            <tr><td>Name Portuguese</td><td>{{name_portuguese}}</td></tr>
+        {{/if}}
+
+        {{#if name_spanish}}
+            <tr><td>Name Spanish</td><td>{{name_spanish}}</td></tr>
+        {{/if}}
+
+        {{#if source_created_at}}
+            <tr><td>Created at</td><td>{{source_created_at}}</td></tr>
+        {{/if}}
+
+        {{#if source_updated_at}}
+            <tr><td>Updated at</td><td>{{source_updated_at}}</td></tr>
+        {{/if}}
+
+      </table>
+  {{/with}}
+{{/if}}

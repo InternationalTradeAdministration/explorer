@@ -2,7 +2,7 @@
   "name": "explorer",
   "dependencies": {
     "handlebars": "~1.3.0",
-    "jquery": "^1.11.1",
+    "jquery": "1.11",
     "ember": "1.7.0",
     "ember-resolver": "~0.1.7",
     "loader": "stefanpenner/loader.js#1.0.1",

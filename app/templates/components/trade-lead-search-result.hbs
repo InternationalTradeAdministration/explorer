@@ -11,6 +11,10 @@
       <tr><td>Country</td><td>{{country}}</td></tr>
     {{/if}}
 
+    {{#if country_name}}
+      <tr><td>Country Name</td><td>{{country_name}}</td></tr>
+    {{/if}}
+
     {{#if notice_type}}
       <tr><td>Notice Type</td><td>{{notice_type}}</td></tr>
     {{/if}}
@@ -38,6 +42,8 @@
     {{#if industry}}
       <tr><td>Industry</td><td>{{industry}}</td></tr>
     {{/if}}
+
+    {{search-result-row-list label="ITA Industries" items=ita_industries}}
 
     {{#if procurement_office_address}}
       <tr><td>Procurement Office Address</td><td>{{procurement_office_address}}</td></tr>
@@ -154,6 +160,26 @@
     {{/if}}
 
     {{search-result-row-list label="Categories" items=categories}}
+
+    {{search-result-row-list label="Trade Regions" items=trade_regions}}
+
+    {{search-result-row-list label="World Regions" items=world_regions}}
+
+    {{#if agency}}
+        <tr><td>Agency</td><td>{{agency}}</td></tr>
+    {{/if}}
+
+    {{#if contract_value}}
+        <tr><td>Contract Value</td><td>{{contract_value}}</td></tr>
+    {{/if}}
+
+    {{#if parent_id}}
+        <tr><td>Parent ID</td><td>{{parent_id}}</td></tr>
+    {{/if}}
+
+    {{#if procurement_method}}
+        <tr><td>Procurement Method</td><td>{{procurement_method}}</td></tr>
+    {{/if}}
 
     </table>
   {{/with}}

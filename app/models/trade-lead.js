@@ -2,6 +2,11 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 
+  agency: DS.attr('string'),
+  contract_value: DS.attr('string'),
+  parent_id: DS.attr('string'),
+  procurement_method: DS.attr('string'),
+
   specific_address: DS.attr('string'),
   project_number: DS.attr('string'),
   project_size: DS.attr('string'),
@@ -11,7 +16,10 @@ export default DS.Model.extend({
   comments: DS.attr('string'),
   submitting_officer: DS.attr('string'),
   submitting_officer_contact: DS.attr('string'),
+
   country: DS.attr('string'),
+  country_name: DS.attr('string'),
+
   title: DS.attr('string'),
   reference_number: DS.attr('string'),
   contract_number: DS.attr('contract_number'),
@@ -41,6 +49,10 @@ export default DS.Model.extend({
   min_contract_value: DS.attr('string'),
   max_contract_value: DS.attr('string'),
   categories: DS.attr('array'),
+
+  ita_industries: DS.attr('array'),
+  trade_regions: DS.attr('string'),
+  world_regions: DS.attr('string'),
 
   searchResultHeader: function() {
     return (this.get('title') || this.get('description'));

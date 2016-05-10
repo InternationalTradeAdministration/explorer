@@ -57,7 +57,7 @@ export default DS.JSONSerializer.extend({
       });
     }
 
-    ['annual_rates', 'alt_annual_rates'].forEach(function(item) {
+    ['annual_rates', 'annual_rates_alt'].forEach(function(item) {
       var annualRates;
       if (payload[item]) {
         annualRates = [];

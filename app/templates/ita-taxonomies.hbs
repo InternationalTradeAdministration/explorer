@@ -8,15 +8,20 @@
       {{input class="pure-input-1" value=qField}}
       
       <div class="pure-u-11-24">
-        <label for="taxonomies">Taxonomies</label>
+        <label for="types">Types</label>
         {{view "select2"
-          content=taxonomyList
-          selection=taxonomiesField
+          content=typeList
+          selection=typesField
           optionValuePath="content.value"
           optionLabelPath="content.label"
-          id="taxonomies"
+          id="types"
           class="pure-u-23-24"
           multiple=true}}
+      </div>
+
+      <div class="pure-u-1 pure-u-md-11-24">
+          <label>Labels</label>
+          {{input class="pure-input-11-12 pure-u-23-24" value=labelsField}}
       </div>
 
       {{input type="submit" value="Search" class="pure-u-1 pure-u-md-11-24 pure-button pure-button-primary"}}

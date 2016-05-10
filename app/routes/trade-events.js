@@ -7,19 +7,25 @@ export default Ember.Route.extend({
     sources: { refreshModel: true },
     page: { refreshModel: true },
     start_date: { refreshModel: true },
-    end_date: { refreshModel: true }
+    end_date: { refreshModel: true },
+    trade_regions: { refreshModel: true},
+    world_regions: { refreshModel: true}
   },
 
   actions: {
     search: function(page) {
       var countries,
         sources,
+        trade_regions,
+        world_regions,
         countriesField = this.controller.get('countriesField'),
         sourcesField = this.controller.get('sourcesField'),
         startDateFieldStart = this.controller.get('startDateFieldStart'),
         startDateFieldEnd = this.controller.get('startDateFieldEnd'),
         endDateFieldStart = this.controller.get('endDateFieldStart'),
-        endDateFieldEnd = this.controller.get('endDateFieldEnd');
+        endDateFieldEnd = this.controller.get('endDateFieldEnd'),
+        tradeRegionsField = this.controller.get('tradeRegionsField'),
+        worldRegionsField = this.controller.get('worldRegionsField');
 
       if (countriesField) {
         countries = countriesField.map(function(item) {
@@ -34,6 +40,20 @@ export default Ember.Route.extend({
         });
       }
       this.controller.set('sources', sources);
+
+      if (tradeRegionsField) {
+        trade_regions = tradeRegionsField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('trade_regions', trade_regions);
+
+      if (worldRegionsField) {
+        world_regions = worldRegionsField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('world_regions', world_regions);
 
       var dateRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 

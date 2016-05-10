@@ -10,9 +10,9 @@ export default Ember.Route.extend({
       q: p.q,
       sources: p.sources,
       page: p.page,
-      final_year: p.final_year,
-      partner_start_year: p.partner_start_year,
-      reporter_start_year: p.reporter_start_year
+      final_years: p.final_years,
+      partner_start_years: p.partner_start_years,
+      reporter_start_years: p.reporter_start_years
     });
   }
 });

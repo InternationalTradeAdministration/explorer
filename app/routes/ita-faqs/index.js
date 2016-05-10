@@ -9,10 +9,13 @@ export default Ember.Route.extend({
     return this.store.find('ita-faq', {
       q: p.q,
       page: p.page,
-      update_date: p.update_date,
+      first_published_date: p.first_published_date,
+      last_published_date: p.last_published_date,
       industries: p.industries,
       countries: p.countries,
-      topics: p.topics
+      topics: p.topics,
+      trade_regions: p.trade_regions,
+      world_regions: p.world_regions
     });
   }
 });

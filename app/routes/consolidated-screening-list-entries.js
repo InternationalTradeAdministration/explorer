@@ -13,7 +13,8 @@ export default Ember.Route.extend({
     end_date: { refreshModel: true },
     expiration_date: { refreshModel: true },
     issue_date: { refreshModel: true },
-    fuzzy_name: { refreshModel: true }
+    fuzzy_name: { refreshModel: true },
+    type: { refreshModel: true }
   },
 
   actions: {
@@ -49,6 +50,7 @@ export default Ember.Route.extend({
       this.controller.set('name', this.controller.get('nameField'));
       this.controller.set('address', this.controller.get('addressField'));
       this.controller.set('fuzzy_name', this.controller.get('fuzzyNameField'));
+      this.controller.set('type', this.controller.get('typeField'));
       this.controller.set('page', (page || 1));
 
       var dateRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;

@@ -3,19 +3,156 @@
   {{#with document}}
     <table class="pure-table pure-table-bordered">
 
-      {{#if id}}
-        <tr><td>ID</td><td>{{id}}</td></tr>
+      {{#if label}}
+        <tr><td>Label</td><td>{{label}}</td></tr>
       {{/if}}
 
-      {{#if name}}
-        <tr><td>Name</td><td>{{name}}</td></tr>
+      {{search-result-row-list label="Type" items=type}}
+
+      {{#if sub_class_of}}
+        <tr><td>Sub Class of</td><td>
+          <ul>
+            {{#each hash in sub_class_of}}
+              <li>{{hash.label}}</li>
+            {{/each}}
+          </ul>
+        </td></tr>
       {{/if}}
 
-      {{#if taxonomy}}
-          <tr><td>Taxonomy</td><td>{{taxonomy}}</td></tr>
+      {{#if annotations}}
+        <tr><td>Annotations</td><td>
+          <ul>
+            {{#if annotations.source}}
+              <li><b>Source:</b>  {{annotations.source}}</li>
+            {{/if}}
+            {{#if annotations.pref_label}}
+              <li><b>Pref Label:</b>  {{annotations.pref_label}}</li>
+            {{/if}}
+            {{#if annotations.alt_label}}
+              <li><b>Alt Label:</b>  {{annotations.alt_label}}</li>
+            {{/if}}
+             {{#if annotations.scope_note}}
+              <li><b>Scope Note:</b>  {{annotations.scope_note}}</li>
+            {{/if}}
+            {{#if annotations.sources}}
+              <li><b>Sources:</b>  {{annotations.sources}}</li>
+            {{/if}}
+            {{#if annotations.definition}}
+              <li><b>Definition:</b>  {{annotations.definition}}</li>
+            {{/if}}
+            {{#if annotations.force_alt_label}}
+              <li><b>Force Alt Label:</b>  {{annotations.force_alt_label}}</li>
+            {{/if}}
+          </ul>
+        </td></tr>
       {{/if}}
 
-      {{search-result-row-list label="Parent Names" items=parent_names}}
+      {{#if datatype_properties}}
+        <tr><td>Datatype Properties</td><td>
+          <ul>
+            {{#if datatype_properties.country_name_iso3166_short}}
+              <li><b> Country Name ISO 3166 Short: </b></li>
+              {{#each val in datatype_properties.country_name_iso3166_short}}
+                <li>{{val}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if datatype_properties.country_code_iso3166_alpha2}}
+              <li><b> Country Code ISO 3166 Alpha 2: </b></li>
+              {{#each val in datatype_properties.country_code_iso3166_alpha2}}
+                <li>{{val}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if datatype_properties.country_code_un_numeric3}}
+              <li><b> Country Code UN Numeric 3: </b></li>
+              {{#each val in datatype_properties.country_code_un_numeric3}}
+                <li>{{val}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if datatype_properties.country_code_iso3166_alpha3}}
+              <li><b> Country Code ISO 3166 Alpha 3: </b></li>
+              {{#each val in datatype_properties.country_code_iso3166_alpha3}}
+                <li>{{val}}</li>
+              {{/each}}
+            {{/if}}
+          </ul>
+        </td></tr>
+      {{/if}}
+
+      {{#if object_properties}}
+        <tr><td>Object Properties</td><td>
+          <ul>
+            {{#if object_properties.is_top_concept_in_scheme}}
+              <li><b> Is Top Concept in Scheme: </b></li>
+              {{#each hash in object_properties.is_top_concept_in_scheme}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.member_of}}
+              <li><b> Member of: </b></li>
+              {{#each hash in object_properties.member_of}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.has_broader}}
+              <li><b> Has Broader: </b></li>
+              {{#each hash in object_properties.has_broader}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.has_narrower}}
+              <li><b> Has Narrower: </b></li>
+              {{#each hash in object_properties.has_narrower}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.has_related}}
+              <li><b> Has Related: </b></li>
+              {{#each hash in object_properties.has_related}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.challenges_sovereignty_of}}
+              <li><b> Challenges Sovereignty of: </b></li>
+              {{#each hash in object_properties.challenges_sovereignty_of}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.sovereignty_challenged_by}}
+              <li><b> Sovereignty Challenged by: </b></li>
+              {{#each hash in object_properties.sovereignty_challenged_by}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.dependent_territory_of}}
+              <li><b> Dependent Territory of: </b></li>
+              {{#each hash in object_properties.dependent_territory_of}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+            {{#if object_properties.has_member_list}}
+              <li><b> Has Member List: </b></li>
+              {{#each hash in object_properties.has_member_list}}
+                <li>{{hash.label}}</li>
+              {{/each}}
+            {{/if}}
+
+          </ul>
+        </td></tr>
+
+      {{/if}}
+
+
 
     </table>
   {{/with}}

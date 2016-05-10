@@ -10,16 +10,30 @@
       <div class="pure-g">
 
         <div class="pure-u-1 pure-u-md-11-24">
-          <label>Update Date</label>
+          <label>First Published Date</label>
           <br>
           {{view "datepicker"
-            value=updateDateFieldStart
-            id="update-date-start"
+            value=firstPublishedDateFieldStart
+            id="first-published-date-start"
             class="pure-u-9-24"}}
           To
           {{view "datepicker"
-            value=updateDateFieldEnd
-            id="update-date-end"
+            value=firstPublishedDateFieldEnd
+            id="first-published-date-end"
+            class="pure-u-9-24"}}
+        </div>
+
+        <div class="pure-u-1 pure-u-md-11-24">
+          <label>Last Published Date</label>
+          <br>
+          {{view "datepicker"
+            value=lastPublishedDateFieldStart
+            id="last-published-date-start"
+            class="pure-u-9-24"}}
+          To
+          {{view "datepicker"
+            value=lastPublishedDateFieldEnd
+            id="last-published-date-end"
             class="pure-u-9-24"}}
         </div>
 
@@ -36,25 +50,25 @@
         </div>
 
         <div class="pure-u-11-24">
-          <label for="industries">Industries</label>
+          <label for="trade-regions">Trade Regions</label>
           {{view "select2"
-            content=industryList
-            selection=industriesField
+            content=tradeRegionsList
+            selection=tradeRegionsField
             optionValuePath="content.value"
             optionLabelPath="content.label"
-            id="industries"
+            id="trade-regions"
             class="pure-u-23-24"
             multiple=true}}
         </div>
 
         <div class="pure-u-11-24">
-          <label for="topics">Topics</label>
+          <label for="world-regions">World Regions</label>
           {{view "select2"
-            content=topicList
-            selection=topicsField
+            content=worldRegionsList
+            selection=worldRegionsField
             optionValuePath="content.value"
             optionLabelPath="content.label"
-            id="topics"
+            id="world-regions"
             class="pure-u-23-24"
             multiple=true}}
         </div>

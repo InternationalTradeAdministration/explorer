@@ -4,11 +4,15 @@ export default DS.Model.extend({
   question: DS.attr('string'),
   answer: DS.attr('string'),
 
-  update_date: DS.attr('string'),
+  first_published_date: DS.attr('string'),
+  last_published_date: DS.attr('string'),
+  url: DS.attr('string'),
 
-  topic: DS.attr('array'),
-  industry: DS.attr('array'),
-  country: DS.attr('array'),
+  topics: DS.attr('array'),
+  industries: DS.attr('array'),
+  countries: DS.attr('array'),
+  trade_regions: DS.attr('array'),
+  world_regions: DS.attr('array'),
 
   searchResultHeader: function() {
     return this.get('question');

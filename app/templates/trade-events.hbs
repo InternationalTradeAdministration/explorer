@@ -50,6 +50,30 @@
             class="pure-u-9-24"}}
         </div>
 
+        <div class="pure-u-1 pure-u-md-11-24">
+          <label for="trade_regions">Trade Regions</label>
+          {{view "select2"
+            content=tradeRegionsList
+            selection=tradeRegionsField
+            optionValuePath="content.value"
+            optionLabelPath="content.label"
+            id="trade_regions"
+            class="pure-u-23-24"
+            multiple=true}}
+        </div>
+
+        <div class="pure-u-1 pure-u-md-11-24">
+          <label for="world_regions">World Regions</label>
+          {{view "select2"
+            content=worldRegionsList
+            selection=worldRegionsField
+            optionValuePath="content.value"
+            optionLabelPath="content.label"
+            id="world_regions"
+            class="pure-u-23-24"
+            multiple=true}}
+        </div>
+
         <div class="pure-u-1 pure-u-md-11-24 countries">
           <label for="countries">Countries</label>
           {{view "select2"

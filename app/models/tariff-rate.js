@@ -11,7 +11,7 @@ export default DS.Model.extend({
   tariff_rate_quota: DS.attr('string'),
   tariff_rate_quota_note: DS.attr('string'),
   tariff_eliminated: DS.attr('string'),
-  ag_id: DS.attr('string'),
+
   partner_name: DS.attr('string'),
   reporter_name: DS.attr('string'),
   staging_basket: DS.attr('string'),
@@ -19,15 +19,14 @@ export default DS.Model.extend({
   reporter_start_year: DS.attr('string'),
   partner_agreement_name: DS.attr('string'),
   reporter_agreement_name: DS.attr('string'),
-  partner_agreement_approved: DS.attr('string'),
-  reporter_agreement_approved: DS.attr('string'),
+
   rule_text: DS.attr('string'),
   link_text: DS.attr('string'),
   link_url: DS.attr('string'),
   quota_name: DS.attr('string'),
 
   annual_rates: DS.hasMany('annual-rate'),
-  alt_annual_rates: DS.hasMany('annual-rate'),
+  annual_rates_alt: DS.hasMany('annual-rate'),
 
   source: DS.attr('string'),
 

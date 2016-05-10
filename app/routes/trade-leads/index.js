@@ -14,6 +14,8 @@ export default Ember.Route.extend({
       publish_date: p.publish_date,
       end_date: p.end_date,
       publish_date_amended: p.publish_date_amended,
+      trade_regions: p.trade_regions,
+      world_regions: p.world_regions
     });
   }
 });

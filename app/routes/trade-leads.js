@@ -8,13 +8,17 @@ export default Ember.Route.extend({
     page: { refreshModel: true },
     publish_date: { refreshModel: true },
     end_date: { refreshModel: true },
-    publish_date_amended: { refreshModel: true }
+    publish_date_amended: { refreshModel: true },
+    trade_regions: { refreshModel: true},
+    world_regions: { refreshModel: true}
   },
 
   actions: {
     search: function(page) {
       var countries,
         sources,
+        trade_regions,
+        world_regions,
         countriesField = this.controller.get('countriesField'),
         sourcesField = this.controller.get('sourcesField'),
         publishDateFieldStart = this.controller.get('publishDateFieldStart'),
@@ -22,7 +26,9 @@ export default Ember.Route.extend({
         endDateFieldStart = this.controller.get('endDateFieldStart'),
         endDateFieldEnd = this.controller.get('endDateFieldEnd'),
         publishDateAmendedFieldStart = this.controller.get('publishDateAmendedFieldStart'),
-        publishDateAmendedFieldEnd = this.controller.get('publishDateAmendedFieldEnd');
+        publishDateAmendedFieldEnd = this.controller.get('publishDateAmendedFieldEnd'),
+        tradeRegionsField = this.controller.get('tradeRegionsField'),
+        worldRegionsField = this.controller.get('worldRegionsField');
 
       if (countriesField) {
         countries = countriesField.map(function(item) {
@@ -37,6 +43,20 @@ export default Ember.Route.extend({
         });
       }
       this.controller.set('sources', sources);
+
+      if (tradeRegionsField) {
+        trade_regions = tradeRegionsField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('trade_regions', trade_regions);
+
+      if (worldRegionsField) {
+        world_regions = worldRegionsField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('world_regions', world_regions);
 
       var dateRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
 

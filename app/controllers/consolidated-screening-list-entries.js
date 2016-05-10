@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address', 'start_date', 'end_date', 'expiration_date', 'issue_date', 'fuzzy_name'],
+  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address', 'type', 'start_date', 'end_date', 'expiration_date', 'issue_date', 'fuzzy_name'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
@@ -11,6 +11,9 @@ export default Ember.ArrayController.extend({
 
   address: null,
   addressField: Ember.computed.oneWay('address'),
+
+  type: null,
+  typeField: Ember.computed.oneWay('type'),
 
   start_date: null,
   startDateFieldStart: null,
@@ -59,6 +62,12 @@ export default Ember.ArrayController.extend({
 
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
+
+  typeList: [
+    {value: 'Individual', label: 'Individual'},
+    {value: 'Entity', label: 'Entity'},
+    {value: 'Vessel', label: 'Vessel'}
+  ],
 
   sourceList: [
     {value: 'DPL', label: 'Denied Persons List (DPL) - Bureau of Industry and Security'},

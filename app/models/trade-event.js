@@ -19,14 +19,25 @@ export default DS.Model.extend({
   source: DS.attr('string'),
 
   industries: DS.attr('array'),
+  ita_industries: DS.attr('array'),
 
   venues: DS.hasMany('venue'),
   country: DS.attr('string'),
+  country_name: DS.attr('string'),
   state: DS.attr('string'),
   city: DS.attr('string'),
   venue: DS.attr('string'),
 
   contacts: DS.hasMany('contact'),
+
+  trade_regions: DS.attr('string'),
+  world_regions: DS.attr('string'),
+
+  first_name: DS.attr('string'),
+  last_name: DS.attr('string'),
+  person_title: DS.attr('string'),
+  phone: DS.attr('string'),
+  email: DS.attr('string'),
 
   searchResultHeader: function() {
     return this.get('event_name');

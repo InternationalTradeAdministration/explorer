@@ -1,10 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'countries', 'page'],
+  queryParams: ['q', 'countries', 'city', 'state', 'page'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
+
+  city: null,
+  cityField: Ember.computed.oneWay('city'),
+
+  state: null,
+  stateField: Ember.computed.oneWay('states'),
 
   countries: null,
   countriesField: function() {

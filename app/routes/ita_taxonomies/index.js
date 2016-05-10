@@ -8,7 +8,8 @@ export default Ember.Route.extend({
 
     return this.store.find('ita-taxonomy', {
       q: p.q,
-      taxonomies: p.taxonomies,
+      types: p.types,
+      labels: p.labels,
       page: p.page
     });
   }

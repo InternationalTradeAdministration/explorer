@@ -3,18 +3,28 @@
   {{#with document}}
     <table class="pure-table pure-table-bordered">
 
-      {{#if state}}
-        <tr><td>State</td><td>{{state}}</td></tr>
-      {{/if}}
-      {{#if country}}
-        <tr><td>Country</td><td>{{country}}</td></tr>
-      {{/if}}
       {{#if post}}
           <tr><td>Post</td><td>{{post}}</td></tr>
       {{/if}}
+
       {{#if office_name}}
           <tr><td>Office Name</td><td>{{office_name}}</td></tr>
       {{/if}}
+
+      {{#if country}}
+        <tr><td>Country</td><td>{{country}}</td></tr>
+      {{/if}}
+
+      {{#if state}}
+        <tr><td>State</td><td>{{state}}</td></tr>
+      {{/if}}
+
+      {{#if city}}
+        <tr><td>City</td><td>{{city}}</td></tr>
+      {{/if}}
+
+      {{search-result-row-list label="Address" items=address}}
+
       {{#if email}}
           <tr><td>Email</td><td>{{email}}</td></tr>
       {{/if}}
@@ -30,7 +40,6 @@
       {{#if post_type}}
           <tr><td>Post Type</td><td>{{post_type}}</td></tr>
       {{/if}}
-      {{search-result-row-list label="Address" items=address}}
 
     </table>
   {{/with}}

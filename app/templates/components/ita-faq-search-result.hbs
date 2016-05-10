@@ -6,20 +6,41 @@
       {{#if question}}
         <tr><td>Question</td><td>{{question}}</td></tr>
       {{/if}}
+
        {{#if answer}}
         <tr><td>Answer</td><td>{{answer}}</td></tr>
       {{/if}}
-      {{#if update_date}}
-        <tr><td>Update Date</td><td>{{update_date}}</td></tr>
+
+      {{#if first_published_date}}
+        <tr><td>First Published Date</td><td>{{first_published_date}}</td></tr>
       {{/if}}
-      {{#if topic}}
-        {{search-result-row-list label="Topic" items=topic}}
+
+      {{#if last_published_date}}
+        <tr><td>Last Published Date</td><td>{{last_published_date}}</td></tr>
       {{/if}}
-      {{#if industry}}
-        {{search-result-row-list label="Industry" items=industry}}
+
+      {{#if url}}
+        <tr><td>URL</td><td>{{url}}</td></tr>
       {{/if}}
-      {{#if country}}
-        {{search-result-row-list label="Country" items=country}}
+
+      {{#if industries}}
+        {{search-result-row-list label="Industries" items=industries}}
+      {{/if}}
+
+      {{#if topics}}
+        {{search-result-row-list label="Topics" items=topics}}
+      {{/if}}
+
+      {{#if countries}}
+        {{search-result-row-list label="Countries" items=countries}}
+      {{/if}}
+
+      {{#if trade_regions}}
+        {{search-result-row-list label="Trade Regions" items=trade_regions}}
+      {{/if}}
+
+      {{#if world_regions}}
+        {{search-result-row-list label="World Regions" items=world_regions}}
       {{/if}}
 
     </table>

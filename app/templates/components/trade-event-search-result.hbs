@@ -94,6 +94,9 @@
               {{#if venue.country}}
                 <li>{{venue.country}}</li>
               {{/if}}
+              {{#if venue.country_name}}
+                <li>{{venue.country_name}}</li>
+              {{/if}}
             </ul></li>
           {{/each}}
           </ol>
@@ -115,9 +118,38 @@
       {{#if source}}
         <tr><td>Source</td><td>{{source}}</td></tr>
       {{/if}}
+
+      {{#if first_name}}
+        <tr><td>First Name</td><td>{{first_name}}</td></tr>
+      {{/if}}
+
+      {{#if last_name}}
+        <tr><td>Last Name</td><td>{{last_name}}</td></tr>
+      {{/if}}
       
+      {{#if post}}
+        <tr><td>Post</td><td>{{post}}</td></tr>
+      {{/if}}
+
+      {{#if person_title}}
+        <tr><td>Person Title</td><td>{{person_title}}</td></tr>
+      {{/if}}
+
+      {{#if phone}}
+        <tr><td>Phone</td><td>{{phone}}</td></tr>
+      {{/if}}
+
+      {{#if email}}
+        <tr><td>Email</td><td>{{email}}</td></tr>
+      {{/if}}
+
       {{search-result-row-list label="Industries" items=industries}}
 
+      {{search-result-row-list label="ITA Industries" items=ita_industries}}
+
+      {{search-result-row-list label="Trade Regions" items=trade_regions}}
+
+      {{search-result-row-list label="World Regions" items=world_regions}}
 
     </table>
   {{/with}}

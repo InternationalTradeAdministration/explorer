@@ -6,6 +6,7 @@ export default DS.Model.extend({
   office_name: DS.attr('string'),
   country: DS.attr('string'),
   state: DS.attr('string'),
+  city: DS.attr('string'),
 
   address: DS.attr('array'),
 

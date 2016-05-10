@@ -1,14 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'page', 'update_date', 'industries', 'countries', 'topics'],
+  queryParams: ['q', 'page', 'first_published_date', 'last_published_date', 'industries', 'countries', 'topics', 'trade_regions', 'world_regions'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
 
-  update_date: null,
-  updateDateFieldStart: null,
-  updateDateFieldEnd: null,
+  first_published_date: null,
+  firstPublishedDateFieldStart: null,
+  firstPublishedDateFieldEnd: null,
+
+  last_published_date: null,
+  lastPublishedDateFieldStart: null,
+  lastPublishedDateFieldEnd: null,
 
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
@@ -45,6 +49,82 @@ export default Ember.Controller.extend({
     });
     return selected;
   }.property('topics'),
+
+  trade_regions: null,
+  tradeRegionsField: function() {
+    var trade_regions = String(this.get('trade_regions')).split(',');
+    var selected = this.get('tradeRegionsList').filter(function(item) {
+      return trade_regions.find(function(given) {
+        return (item.value === given);
+      });
+    });
+    return selected;
+  }.property('trade_regions'),
+
+  world_regions: null,
+  worldRegionsField: function() {
+    var world_regions = String(this.get('world_regions')).split(',');
+    var selected = this.get('worldRegionsList').filter(function(item) {
+      return world_regions.find(function(given) {
+        return (item.value === given);
+      });
+    });
+    return selected;
+  }.property('world_regions'),
+
+  tradeRegionsList: [
+    {value: "Organization of the Petroleum Exporting Countries", label: "Organization of the Petroleum Exporting Countries"},
+    {value: "Asia Pacific Economic Cooperation", label: "Asia Pacific Economic Cooperation"},
+    {value: "Caribbean Community and Common Market", label: "Caribbean Community and Common Market"},
+    {value: "Association of Southeast Asian Nations", label: "Association of Southeast Asian Nations"},
+    {value: "Commonwealth of Independent States", label: "Commonwealth of Independent States"},
+    {value: "Economic Cooperation Organization", label: "Economic Cooperation Organization"},
+    {value: "South African Development Community", label: "South African Development Community"},
+    {value: "South Asian Association for Regional Cooperation", label: "South Asian Association for Regional Cooperation"},
+    {value: "Organization of the Petroleum Exporting Countries", label: "Organization of the Petroleum Exporting Countries"},
+    {value: "South African Customs Union", label: "South African Customs Union"},
+    {value: "European Free Trade Association", label: "European Free Trade Association"},
+    {value: "Gulf Cooperation Council", label: "Gulf Cooperation Council"},
+    {value: "Global System of Trade Preferences among Developing Countries", label: "Global System of Trade Preferences among Developing Countries"},
+    {value: "Andean Community", label: "Andean Community"},
+    {value: "Eurasian Economic Union", label: "Eurasian Economic Union"},
+    {value: "Economic and Monetary Community of Central Africa", label: "Economic and Monetary Community of Central Africa"},
+    {value: "Common Market for Eastern and Southern Africa", label: "Common Market for Eastern and Southern Africa"},
+    {value: "European Union - 28", label: "European Union - 28"},
+    {value: "West African Economic and Monetary Union", label: "West African Economic and Monetary Union"},
+    {value: "Southern Common Market", label: "Southern Common Market"},
+    {value: "NAFTA", label: "NAFTA"},
+    {value: "Trans Pacific Partnership", label: "Trans Pacific Partnership"},
+    {value: "CAFTA-DR", label: "CAFTA-DR"},
+    {value: "African Growth and Opportunity Act", label: "African Growth and Opportunity Act"}
+  ],
+
+  worldRegionsList: [
+    {value: "Pacific Rim", label: "Pacific Rim"},
+    {value: "Middle East", label: "Middle East"},
+    {value: "Persian Gulf Region", label: "Persian Gulf Region"},
+    {value: "Levant", label: "Levant"},
+    {value: "Asia", label: "Asia"},
+    {value: "Central Asia", label: "Central Asia"},
+    {value: "Southeast Asia", label: "Southeast Asia"},
+    {value: "East Asia", label: "East Asia"},
+    {value: "South Asia", label: "South Asia"},
+    {value: "Oceania", label: "Oceania"},
+    {value: "Latin America", label: "Latin America"},
+    {value: "South America", label: "South America"},
+    {value: "Europe", label: "Europe"},
+    {value: "Caucasus", label: "Caucasus"},
+    {value: "Caribbean", label: "Caribbean"},
+    {value: "Netherlands Antilles", label: "Netherlands Antilles"},
+    {value: "Western Hemisphere", label: "Western Hemisphere"},
+    {value: "North America", label: "North America"},
+    {value: "Central America", label: "Central America"},
+    {value: "Asia Pacific", label: "Asia Pacific"},
+    {value: "Africa", label: "Africa"},
+    {value: "West Africa", label: "West Africa"},
+    {value: "Sub-Saharan Africa", label: "Sub-Saharan Africa"},
+    {value: "North Africa", label: "North Africa"}
+  ],
 
   industryList: [
     {label: 'Agribusiness', value: 'Agribusiness'},

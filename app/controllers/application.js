@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
     //{ label: "ECCNs", value: "eccns"},
     { label: "Zip Code to USEAC", value: "ita-zip-codes"},
     { label: "Business Service Providers", value: "business-service-providers"},
-    { label: "Environmental Solutions", value: "environmental-solutions"},
+    //{ label: "Environmental Solutions", value: "environmental-solutions"},
     { label: "ITA Taxonomies", value: "ita-taxonomies"},
     { label: "De Minimis", value: "de-minimis"}
     //{ label: "Country Fact Sheets", value: "country-fact-sheets"}

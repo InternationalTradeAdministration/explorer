@@ -37,7 +37,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.baseURL = '/explorer';
     ENV.locationType = 'hash';
-    ENV.webservicesBaseURL = 'http://api.trade.gov';
+    ENV.webservicesBaseURL = 'https://api.trade.gov';
     ENV.webservicesApiKey = 'VeaYLDhMLX_HwcbEbx27s5r3';
     ENV.developerportalUrl = 'http://developer.trade.gov';
     ENV.apiKeyUrl = 'https://api.trade.gov';

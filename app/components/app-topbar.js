@@ -4,8 +4,8 @@ import ENV from 'explorer/config/environment';
 export default Ember.Component.extend({
   developerportalUrl: ENV.developerportalUrl,
   apiKeyUrl: ENV.apiKeyUrl,
-  webservices_baseurl: 'https://api.govwizely.com',
-  webservices_baseurl_users_signup: 'https://api.govwizely.com/users/sign_up',
+  webservices_baseurl: 'https://api.trade.gov',
+  webservices_baseurl_users_signup: 'https://api.trade.gov/users/sign_up',
   topApisNavItems: [
     { text: 'Consolidated Screening List', path: 'consolidated-screening-list.html' },
     { text: 'Trade Events', path: 'trade-events.html' },
